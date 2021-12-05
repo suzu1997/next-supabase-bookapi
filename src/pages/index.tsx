@@ -43,7 +43,7 @@ const Home: NextPage = () => {
             <div className='w-full sm:w-96'>
               <Auth
                 supabaseClient={client}
-                providers={['github', 'twitter', 'google']}
+                providers={['github', 'google']}
                 socialColors={true}
               />
             </div>
