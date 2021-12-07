@@ -6,7 +6,7 @@ import { ChevronUpIcon } from '@heroicons/react/solid';
 
 import { client } from 'src/libs/supabase';
 import { Title } from './TitleList';
-import noImage from 'public/no-image.png';
+import noImage from 'public/no_image.png';
 import { Button, IconSave, IconTrash2, IconX } from '@supabase/ui';
 import { Subtitle } from 'src/pages/title';
 
@@ -19,7 +19,7 @@ type Props = {
 
 // 書籍情報(subtitle)の編集ページ
 export const SubtitleCard: VFC<Props> = (props) => {
-  const [isOpen, setIsOpen] = useState<boolean>(true);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
   const [volume, setVolume] = useState<string>(
     props.subtitle.volume.toString()
   );
@@ -239,7 +239,7 @@ export const SubtitleCard: VFC<Props> = (props) => {
                 </div>
 
                 <div className='flex justify-center mt-4'>
-                  <div className='w-32 p-2'>
+                  <div className='w-32 p-2 flex justify-center gap-2'>
                     <Button
                       block
                       type='default'
