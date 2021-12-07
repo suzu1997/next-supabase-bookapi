@@ -4,7 +4,6 @@ import {
   Dispatch,
   SetStateAction,
   RefObject,
-  MouseEventHandler,
 } from 'react';
 import Image from 'next/image';
 
@@ -21,6 +20,7 @@ export const BookList: VFC<Props> = (props) => {
   const handleClick = useCallback(
     (isbn: string) => {
       props.setIsbn(isbn);
+      // useRefで持っているDOMを参照してクローズ
       props.close.current?.click();
     },
     [props]

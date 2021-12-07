@@ -21,8 +21,10 @@ type Props = {
 
 export const SearchSubtitle: VFC<Props> = (props) => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
+  // あらかじめ漫画タイトルを入力しておく
   const [text, setText] = useState<string>(props.title.title);
   const [bookList, setBookList] = useState<BookData[]>([]);
+  // ディスクロージャーの閉じるボタンへの参照を取得
   const buttonRef = useRef<HTMLButtonElement>(null);
 
   // 検索実行 タイトルから検索
